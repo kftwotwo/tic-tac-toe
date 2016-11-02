@@ -23,27 +23,48 @@
       </div><!--first row -->
         <div id="original" class="col s12">
           <center><h1 class="title">Original</h1></center>
-          <div class="row">
-            <div class="col s3">.</div>
-            <div class="col s2 btn btn-primary"id="1"> </div>
-            <div class="col s2 btn btn-primary"id="2"> </div>
-            <div class="col s2 btn btn-primary"id="3"> </div>
-            <div class="col s3">.</div>
-          </div>
-          <div class="row">
-            <div class="col s3">.</div>
-            <div class="col s2 btn btn-primary"id="4"> </div>
-            <div class="col s2 btn btn-primary"id="5"> </div>
-            <div class="col s2 btn btn-primary"id="6"> </div>
-            <div class="col s3">.</div>
-          </div>
-          <div class="row">
-            <div class="col s3">.</div>
-            <div class="col s2 btn btn-primary"id="7"> </div>
-            <div class="col s2 btn btn-primary"id="8"> </div>
-            <div class="col s2 btn btn-primary"id="9"> </div>
-            <div class="col s3">.</div>
-          </div>
+          <div class="ticButton">
+            <div class="row">
+              <div class="col s3">.</div>
+              <div class="col s2 btn btn-primary"id="0"> </div>
+              <div class="col s2 btn btn-primary"id="1"> </div>
+              <div class="col s2 btn btn-primary"id="2"> </div>
+              <div class="col s3">.</div>
+            </div>
+            <div class="row">
+              <div class="col s3">.</div>
+              <div class="col s2 btn btn-primary"id="3"> </div>
+              <div class="col s2 btn btn-primary"id="4"> </div>
+              <div class="col s2 btn btn-primary"id="5"> </div>
+              <div class="col s3">.</div>
+            </div>
+            <div class="row">
+              <div class="col s3">.</div>
+              <div class="col s2 btn btn-primary"id="6"> </div>
+              <div class="col s2 btn btn-primary"id="7"> </div>
+              <div class="col s2 btn btn-primary"id="8"> </div>
+              <div class="col s3">.</div>
+            </div>
+            <div class="row results">
+              <div class="col s3">.</div>
+              <div class="col s2 card-panel red lighten-3">X Score is: <span class="xScore">0</span></div>
+              <div class="col s2">. </div>
+              <div class="col s2 card-panel red lighten-3">O Score is: <span class="oScore">0</span> </div>
+              <div class="col s3">.</div>
+            </div>
+        </div>
+          <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
         </div>
         <div id="8bit" class="col s12">
           <center><h1 id="8bitTitle">8 Bit</h1></center>
@@ -51,6 +72,7 @@
         </div>
         <div id="pacman" class="col s12">Pac-man</div>
         <div id="zelda" class="col s12">Zelda</div>
+
 
       </div>
    </body>
