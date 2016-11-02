@@ -31,6 +31,13 @@ function checkWinner () {
     }
   }
 }
+
+function noMovesLeft(){
+  if (newBoard.boardGrid.indexOf(0)===-1){
+    return true;
+  }
+}
+
 $(document).ready(function(){
 
   player1 = new Player("X");
@@ -52,11 +59,24 @@ $(document).ready(function(){
       }
     }
      if (checkWinner()) {
-       $(".player").text(ticTacToe.winner);
+       $(".output").text("Player "+ticTacToe.winner+ " Won!!!");
        $("#modal1").openModal({dismissible: false})
-
+     }
+     else if (noMovesLeft()){
+       $(".output").text("The game is a tie! ");
+       $("#modal1").openModal({dismissible: false})
      }
     $(".xScore").text(player1.score);
     $(".oScore").text(player2.score);
+  });
+  $(".newGame").click(function(){
+    player1 = new Player("X");
+    player2 = new Player("O");
+    newBoard = new Board();
+    ticTacToe.turn=1;
+    ticTacToe.winner=0;
+    $(".ticButton .btn").each(function(){
+      $(this).text("");
+    });
   });
 });
