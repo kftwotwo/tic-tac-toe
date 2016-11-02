@@ -2,11 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css'>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Tic-Tac-Toe</title>
   </head>
@@ -47,33 +45,28 @@
             </div>
             <div class="row results">
               <div class="col s3">.</div>
-              <div class="col s2 card-panel red lighten-3">X Score is: <span class="xScore">0</span></div>
+              <div class="col s2 card-panel red lighten-3">Player 1(X): <span class="xScore">0</span></div>
               <div class="col s2">. </div>
-              <div class="col s2 card-panel red lighten-3">O Score is: <span class="oScore">0</span> </div>
+              <div class="col s2 card-panel red lighten-3">Player 2(O): <span class="oScore">0</span> </div>
               <div class="col s3">.</div>
             </div>
-        </div>
-          <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-        </div>
+          </div>
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Player <span class="player"></span></h4>
+              <p>WON!!!!!</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">New Game</a>
+            </div>
+          </div>
         <div id="8bit" class="col s12">
           <center><h1 id="8bitTitle">8 Bit</h1></center>
-
         </div>
         <div id="pacman" class="col s12">Pac-man</div>
         <div id="zelda" class="col s12">Zelda</div>
-
-
       </div>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script>
+
    </body>
 </html>

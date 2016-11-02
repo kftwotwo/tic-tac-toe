@@ -11,6 +11,7 @@ function Game () {
   this.gameStatus = ["Start Game or select player","O turn", "X turn", "Game over"];
   this.turn = 1;
   this.matchHistory = [];
+  this.winner = 0;
 }
 function Board () {
   this.boardGrid = [0,0,0,0,0,0,0,0,0];
@@ -20,13 +21,18 @@ function checkWinner () {
   for(i=0;i<8;i++) {
     if(newBoard.boardGrid[newBoard.winningSpot[i][0]]==1 && newBoard.boardGrid[newBoard.winningSpot[i][1]]==1 && newBoard.boardGrid[newBoard.winningSpot[i][2]]==1){
       player1.score++;
+      ticTacToe.winner =1;
+      return true;
     }
     else if (newBoard.boardGrid[newBoard.winningSpot[i][0]]==2 && newBoard.boardGrid[newBoard.winningSpot[i][1]]==2 && newBoard.boardGrid[newBoard.winningSpot[i][2]]==2) {
       player2.score++;
+      ticTacToe.winner =2;
+      return true;
     }
   }
 }
 $(document).ready(function(){
+
   player1 = new Player("X");
   player2 = new Player("O");
   ticTacToe = new Game();
@@ -45,9 +51,12 @@ $(document).ready(function(){
         ticTacToe.turn=1;
       }
     }
-    checkWinner();
+     if (checkWinner()) {
+       $(".player").text(ticTacToe.winner);
+       $("#modal1").openModal({dismissible: false})
+
+     }
     $(".xScore").text(player1.score);
     $(".oScore").text(player2.score);
-
   });
 });
