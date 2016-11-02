@@ -16,7 +16,14 @@ function Board () {
   this.boardGrid = [0,0,0,0,0,0,0,0,0];
   this.winningSpot = [[1,2,3], [4,5,6],[7,8,9], [1,4,7], [2,5,8], [3,6,9], [1,5,9],[3,5,7]];
 }
+function checkWinner () {
+  for(i=0;i<8;i++) {
+    if(newBoard.boardGrid[newBoard.winningSpot[i][0]-1]==1 && newBoard.boardGrid[newBoard.winningSpot[i][1]-1]==1 && newBoard.boardGrid[newBoard.winningSpot[i][2]-1]==1){
+      alert("won!")
+    }
 
+  }
+}
 $(document).ready(function(){
   player1 = new Player("X");
   player2 = new Player("O");
@@ -36,6 +43,7 @@ $(document).ready(function(){
         ticTacToe.turn=0;
       }
     }
+    checkWinner();
 
   });
 });
