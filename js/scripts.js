@@ -1,3 +1,8 @@
+var player1;
+var player2;
+var ticTacToe;
+var newBoard;
+
 function Player (code) {
   this.userPlayer = code;
 }
@@ -13,7 +18,24 @@ function Board () {
 }
 
 $(document).ready(function(){
+  player1 = new Player("X");
+  player2 = new Player("O");
+  ticTacToe = new Game();
+  newBoard = new Board();
+
   $(".btn").click(function() {
-  $(this).text("X");
+    var currentSpot=parseInt($(this).attr('id'));
+    if(!newBoard.boardGrid[currentSpot]){ //! is != or not true
+      newBoard.boardGrid[currentSpot]=1;
+      if(ticTacToe.turn==0){
+        $(this).text("X");
+        ticTacToe.turn=1;
+      }
+      else if (ticTacToe.turn==1) {
+        $(this).text("O");
+        ticTacToe.turn=0;
+      }
+    }
+
   });
 });
