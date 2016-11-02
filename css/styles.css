@@ -2,3 +2,6 @@ body {
   text-align: center;
   font-family: 'Lato', sans-serif;
 }
+.ticButton .btn {
+  height: 100px;
+}
