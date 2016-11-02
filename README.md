@@ -1,7 +1,7 @@
 ## Specs
-* create the player object
-* create game object (status object)
-* create board object
+* create the player object.
+* create game object (status object).
+* create board object.
 * onClick check if empty
   * if empty mark it
   * check winning status
@@ -13,6 +13,3 @@
 * able to choose a computer or two players
 * build computer AI
 * able to choose difficulty
-*
-*
-*
