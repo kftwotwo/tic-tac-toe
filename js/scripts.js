@@ -69,14 +69,14 @@ $(document).ready(function(){
     $(".xScore").text(player1.score);
     $(".oScore").text(player2.score);
   });
+
   $(".newGame").click(function(){
-    player1 = new Player("X");
-    player2 = new Player("O");
-    newBoard = new Board();
+    newBoard.boardGrid= [0,0,0,0,0,0,0,0,0];
     ticTacToe.turn=1;
     ticTacToe.winner=0;
     $(".ticButton .btn").each(function(){
       $(this).text("");
+      $('#modal1').closeModal();
     });
   });
 });
