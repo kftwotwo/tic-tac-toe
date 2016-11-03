@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Tic-Tac-Toe</title>
   </head>
   <body class="container">
@@ -20,8 +20,15 @@
           </ul>
         </div>
       </div><!--first row -->
+
         <div id="original" class="col s12">
           <center><img src="http://www.dsmsales.net/images/logos/tttmarqlrg.gif" alt="tic-tac-toe" /></center>
+          <a class='dropdown-button btn teal lighten-3' id="dropdown" href='#' data-activates='dropdown1'>Difficulty</a>
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">Easy</a></li>
+            <li><a href="#!">Normal</a></li>
+            <li><a href="#!">Hard</a></li>
+          </ul>
           <div class="ticButton">
             <div class="row">
               <div class="col s3">.</div>

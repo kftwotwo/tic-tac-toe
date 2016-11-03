@@ -1,12 +1,12 @@
 body {
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 img {
   margin-bottom: 30px;
   padding-bottom: 30px;
   width: 100%;
-  max-width: 800px;
+  max-width: 70%;
 }
 .ticButton .btn {
   height: 100px;
@@ -21,4 +21,8 @@ img {
   padding-top: 7px !important;
   height: auto;
   width: auto;
+}
+
+.status{
+  margin: 20px;
 }
