@@ -7,6 +7,7 @@ img {
   padding-bottom: 30px;
   width: 100%;
   max-width: 70%;
+  height: auto;
 }
 .ticButton .btn {
   height: 100px;
@@ -26,12 +27,17 @@ img {
 .status{
   margin: 20px;
 }
-#dropdown {
-
-}
 .space {
   margin-left: 24.8% !important;
 }
 .left {
   margin-left: 17% !important;
+}
+/*--------------------*/
+#pacman {
+  background-color: black;
+}
+
+#zelda {
+  background-color:  #CC9900;
 }

@@ -15,7 +15,6 @@
         <div class="col s12">
           <ul class="tabs">
             <li class="tab col s3"><a class="active" href="#original">Original</a></li>
-            <li class="tab col s3"><a href="#8bit">8-bit</a></li>
             <li class="tab col s3"><a href="#pacman">Pac-man</a></li>
             <li class="tab col s3"><a href="#zelda">Zelda</a></li>
           </ul>
@@ -65,11 +64,111 @@
               <div class="newGame btn red lighten-2">New Game</div>
             </div>
           </div>
-        <div id="8bit" class="col s12">
-          <center><h1 id="8bitTitle">8 Bit</h1></center>
         </div>
-        <div id="pacman" class="col s12">Pac-man</div>
-        <div id="zelda" class="col s12">Zelda</div>
+        <div id="pacman" class="col s12"> <!-- PACMAN -->
+          <div id="original" class="col s12">
+            <center><img src="http://cdn.shopify.com/s/files/1/0949/8650/collections/PAC_logo_RGB_b722c662-bd3d-4e60-9b76-ac232fcdc864_1024x1024.png?v=1466545385" alt="tic-tac-toe" /></center>
+            <a class='dropdown-button btn teal lighten-3' id="dropdown" href='#' data-activates='dropdown1'><span id="diff">Easy</span></a>
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a id="easy">Easy</a></li>
+              <li><a id="normal">Normal</a></li>
+              <li><a id="hard">Hard</a></li>
+            </ul>
+            <div class="ticButton">
+              <div class="row">
+                <div class="col s2 btn btn-primary space"id="0"> </div>
+                <div class="col s2 btn btn-primary"id="1"> </div>
+                <div class="col s2 btn btn-primary"id="2"> </div>
+                <div class="col s3"></div>
+              </div>
+              <div class="row">
+                <div class="col s2 btn btn-primary space"id="3"> </div>
+                <div class="col s2 btn btn-primary"id="4"> </div>
+                <div class="col s2 btn btn-primary"id="5"> </div>
+                <div class="col s3"></div>
+              </div>
+              <div class="row">
+                <div class="col s2 btn btn-primary space"id="6"></div>
+                <div class="col s2 btn btn-primary"id="7"></div>
+                <div class="col s2 btn btn-primary"id="8"></div>
+                <div class="col s3"></div>
+              </div>
+              <div class="status">
+                <div class="col s4"><span id="status"></span></div>
+                <div class="col s4"></div>
+              </div>
+              <div class="row results">
+                <div class="col s2 card-panel red lighten-3 space">Player 1(X): <span class="xScore">0</span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pacman.svg/2000px-Pacman.svg.png"></div>
+                <div class="col s2 card-panel red lighten-3 left">Player 2(O): <span class="oScore">0</span><img src='http://www.pngmart.com/files/2/Pac-Man-Ghost-PNG-Image.png'></div>
+              </div>
+            </div>
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h2 class="output"></h2>
+              </div>
+              <div class="modal-footer">
+                <div class="newGame btn red lighten-2">New Game</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="zelda" class="col s12"><!-- ZELDA -->
+          <div id="original" class="col s12">
+            <center><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/The_Legend_of_Zelda_A_Link_to_the_Past.png" alt="tic-tac-toe" /></center>
+            <a class='dropdown-button btn teal lighten-3' id="dropdown" href='#' data-activates='dropdown1'><span id="diff">Easy</span></a>
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a id="easy">Easy</a></li>
+              <li><a id="normal">Normal</a></li>
+              <li><a id="hard">Hard</a></li>
+            </ul>
+            <div class="ticButton">
+              <div class="row">
+                <div class="col s2 btn btn-primary space"id="0"> </div>
+                <div class="col s2 btn btn-primary"id="1"> </div>
+                <div class="col s2 btn btn-primary"id="2"> </div>
+                <div class="col s3"></div>
+              </div>
+              <div class="row">
+                <div class="col s2 btn btn-primary space"id="3"> </div>
+                <div class="col s2 btn btn-primary"id="4"> </div>
+                <div class="col s2 btn btn-primary"id="5"> </div>
+                <div class="col s3"></div>
+              </div>
+              <div class="row">
+                <div class="col s2 btn btn-primary space"id="6"> </div>
+                <div class="col s2 btn btn-primary"id="7"> </div>
+                <div class="col s2 btn btn-primary"id="8"> </div>
+                <div class="col s3"></div>
+              </div>
+              <div class="status">
+                <div class="col s4"><span id="status"></span></div>
+                <div class="col s4"></div>
+              </div>
+              <div class="row results">
+                <div class="col s2 card-panel red lighten-3 space">Player 1(X): <span class="xScore">0</span><img src="http://vignette2.wikia.nocookie.net/zelda/images/8/80/Master_Sword_(Ocarina_of_Time).png/revision/latest?cb=20090421233552"/></div>
+                <div class="col s2 card-panel red lighten-3 left">Player 2(O): <span class="oScore">0</span><img src="https://s-media-cache-ak0.pinimg.com/originals/f3/8c/5e/f38c5e911994e1acea737b81a7c6ce3c.png"/> </div>
+              </div>
+            </div>
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h2 class="output"></h2>
+              </div>
+              <div class="modal-footer">
+                <div class="newGame btn red lighten-2">New Game</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
       </div>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js'></script>
 

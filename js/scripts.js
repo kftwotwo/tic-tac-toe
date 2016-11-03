@@ -32,13 +32,11 @@ function checkWinner () {
     }
   }
 }
-
 function noMovesLeft(){
   if (newBoard.boardGrid.indexOf(0)===-1){
     return true;
   }
 }
-
 
 $(document).ready(function(){
   player1 = new Player("X");
@@ -71,12 +69,12 @@ $(document).ready(function(){
     if(!newBoard.boardGrid[currentSpot]){ //! is != or not true
       newBoard.boardGrid[currentSpot]=ticTacToe.turn;
       if(ticTacToe.turn==1){
-        $(this).text("X");
+        $(this).append("X");
         ticTacToe.turn=2;
         $(".status").text(ticTacToe.gameStatus[0, 1, 2])
       }
       else if (ticTacToe.turn==2) {
-        $(this).text("O");
+        $(this).html("O");
         ticTacToe.turn=1;
         $(".status").text(ticTacToe.gameStatus[2]);
       }
