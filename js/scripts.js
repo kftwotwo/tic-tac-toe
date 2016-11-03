@@ -8,7 +8,8 @@ function Player (code) {
   this.score = 0;
 }
 function Game () {
-  this.gameStatus = ["Start Game or select player","O turn", "X turn", "Game over"];
+  this.gameStatus = ["Start Game or select player","O turn", "X turn", "Game over", "Play Again"];
+  this.gamestate = []
   this.turn = 1;
   this.matchHistory = [];
   this.winner = 0;
@@ -42,6 +43,7 @@ $(document).ready(function(){
   player2 = new Player("O");
   ticTacToe = new Game();
   newBoard = new Board();
+  $(".status").text(ticTacToe.gameStatus[0]);
   $(".ticButton .btn").click(function() {
     var currentSpot=parseInt($(this).attr('id'));
     if(!newBoard.boardGrid[currentSpot]){ //! is != or not true
@@ -49,15 +51,18 @@ $(document).ready(function(){
       if(ticTacToe.turn==1){
         $(this).text("X");
         ticTacToe.turn=2;
+        $(".status").text(ticTacToe.gameStatus[1]);
       }
       else if (ticTacToe.turn==2) {
         $(this).text("O");
         ticTacToe.turn=1;
+        $(".status").text(ticTacToe.gameStatus[2]);
       }
     }
      if (checkWinner()) {
        $(".output").text("Player "+ticTacToe.winner+ " Won!!!");
-       $("#modal1").openModal({dismissible: false})
+       $("#modal1").openModal({dismissible: false});
+       $(".status").text(ticTacToe.gameStatus[3]);
      }
      else if (noMovesLeft()){
        $(".output").text("The game is a tie! ");
@@ -74,6 +79,7 @@ $(document).ready(function(){
     $(".ticButton .btn").each(function(){
       $(this).text("");
       $('#modal1').closeModal();
+      $(".status").text(ticTacToe.gameStatus[4]);
     });
   });
 });
