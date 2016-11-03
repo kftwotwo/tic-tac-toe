@@ -9,10 +9,10 @@ function Player (code) {
 }
 function Game () {
   this.gameStatus = ["Start Game or select player","O turn", "X turn", "Game over", "Play Again"];
-  this.gamestate = []
   this.turn = 1;
   this.matchHistory = [];
   this.winner = 0;
+  this.difficulty = ["Easy", "Normal", "Hard"]
 }
 function Board () {
   this.boardGrid = [0,0,0,0,0,0,0,0,0];
@@ -38,12 +38,34 @@ function noMovesLeft(){
     return true;
   }
 }
+
+
 $(document).ready(function(){
   player1 = new Player("X");
   player2 = new Player("O");
   ticTacToe = new Game();
   newBoard = new Board();
   $(".status").text(ticTacToe.gameStatus[0]);
+
+  $("#dropdown1 a").click(function(){
+    if($(this).attr("id")==="easy"){
+      $("#diff").text("Easy")
+    }
+    else if ($(this).attr("id")==="normal") {
+      $("#diff").text("Normal")
+    }
+    else{
+      $("#diff").text("Hard")
+    }
+  });
+  $("#dropdown a").click(function(){
+    if($(this).attr("id")==="easy"){
+      $("#player").text("0ne player")
+    }
+    else if ($(this).attr("id")==="normal") {
+      $("#diff").text("Two players")
+    }
+  });
   $(".ticButton .btn").click(function() {
     var currentSpot=parseInt($(this).attr('id'));
     if(!newBoard.boardGrid[currentSpot]){ //! is != or not true
@@ -51,7 +73,7 @@ $(document).ready(function(){
       if(ticTacToe.turn==1){
         $(this).text("X");
         ticTacToe.turn=2;
-        $(".status").text(ticTacToe.gameStatus[1]);
+        $(".status").text(ticTacToe.gameStatus[0, 1, 2])
       }
       else if (ticTacToe.turn==2) {
         $(this).text("O");
