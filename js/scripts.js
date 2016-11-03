@@ -37,14 +37,11 @@ function noMovesLeft(){
     return true;
   }
 }
-
 $(document).ready(function(){
-
   player1 = new Player("X");
   player2 = new Player("O");
   ticTacToe = new Game();
   newBoard = new Board();
-
   $(".ticButton .btn").click(function() {
     var currentSpot=parseInt($(this).attr('id'));
     if(!newBoard.boardGrid[currentSpot]){ //! is != or not true
